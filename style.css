@@ -1,1 +1,182 @@
+/* Custom Properties (Variables) */
+:root {
+    --primary-color: #FF5722; /* A warm orange accent for food/delivery */
+    --secondary-color: #333;
+    --background-color: #f7f7f7; /* Light grey background */
+    --card-background: #ffffff;
+    --border-color: #ddd;
+    --font-family: 'Poppins', sans-serif; /* A modern, clean font (import via Google Fonts) */
+    --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
 
+/* Base Styles & Typography */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Hide labels visually but keep them for accessibility */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* --- Container and Logo --- */
+.login-container {
+    text-align: center;
+    width: 100%;
+    max-width: 400px; /* Minimal width */
+    padding: 20px;
+}
+
+.logo {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+/* --- Authentication Card --- */
+.auth-card {
+    background-color: var(--card-background);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: var(--box-shadow);
+    animation: fadeIn 0.8s ease-out; /* Uses animation from animations.css */
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+/* --- Social Button (Google) --- */
+.social-btn {
+    width: 100%;
+    padding: 12px 20px;
+    margin-bottom: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: var(--card-background);
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+    border-color: var(--primary-color);
+}
+
+.social-btn .icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+/* --- Divider --- */
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+    color: #999;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #eee;
+}
+
+.divider:not(:empty)::before {
+    margin-right: .25em;
+}
+
+.divider:not(:empty)::after {
+    margin-left: .25em;
+}
+
+/* --- Form and Inputs --- */
+.input-group {
+    margin-bottom: 15px;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 87, 34, 0.15); /* Subtle focus ring */
+}
+
+/* --- Primary Button --- */
+.btn-primary {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn-primary:active {
+    background-color: #e64a19;
+}
+
+/* --- Form Footer --- */
+.form-footer {
+    margin-top: 20px;
+}
+
+.link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.link:hover {
+    color: #e64a19;
+    text-decoration: underline;
+}
