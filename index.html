@@ -1,1 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Delivery Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animations.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1 class="logo">
+            <span aria-hidden="true" class="logo-icon">🍽️</span> 
+            **DineDash**
+        </h1>
+        <p class="subtitle">Log in or Sign up to start your order.</p>
 
+        <div class="auth-card">
+            <h2 class="card-title">Welcome Back</h2>
+
+            <button class="social-btn google-btn pulse-on-hover">
+                <img src="google-icon.png" alt="Google logo" class="icon">
+                Continue with Google
+            </button>
+
+            <div class="divider">
+                <span>OR</span>
+            </div>
+
+            <form class="email-form">
+                <div class="input-group">
+                    <label for="email" class="sr-only">Email Address</label>
+                    <input type="email" id="email" placeholder="Email Address" required>
+                </div>
+                <div class="input-group">
+                    <label for="password" class="sr-only">Password</label>
+                    <input type="password" id="password" placeholder="Password" required>
+                </div>
+                
+                <button type="submit" class="btn-primary lift-on-hover">
+                    Log In / Sign Up
+                </button>
+            </form>
+
+            <div class="form-footer">
+                <a href="#" class="link">Forgot Password?</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
