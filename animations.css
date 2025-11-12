@@ -14,21 +14,27 @@
 /* --- Button Hover Effects --- */
 /* Used for the primary "Log In / Sign Up" button */
 .lift-on-hover {
+    animation: fadeIn 0.6s ease forwards;
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s;
+    border-radius: 8px;
+    cursor: pointer;
 }
 
 .lift-on-hover:hover {
-    transform: translateY(-3px); /* Lifts the button slightly */
-    box-shadow: 0 8px 15px rgba(255, 87, 34, 0.3); /* Subtle orange glow */
+    transform: translateY(-4px) scale(1.02); /* Lifts the button slightly */
+    box-shadow: 0 10px 20px rgba(255, 87, 34, 0.35); /* Subtle orange glow */
 }
 
 /* --- Social Button Pulse Effect --- */
 /* Used for the "Continue with Google" button */
-.pulse-on-hover {
+.pulse-on-hover:active {
+    transform: translate(0);
+    box-shadow: 0 5px 10px rgba(255,87,34,0.25);
     transition: transform 0.2s ease, border-color 0.3s;
 }
 
 .pulse-on-hover:hover {
-    transform: scale(1.01); /* Subtle slight enlargement */
+    transform: scale(1.03); /* Subtle slight enlargement */
     border-color: var(--primary-color);
+    box-shadow: 0 0 10px rgba(255,87,34, 0.2);
 }
